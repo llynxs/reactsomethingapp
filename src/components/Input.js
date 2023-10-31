@@ -1,4 +1,4 @@
-import React, { useCallback, memo } from 'react';
+import React, { memo } from 'react';
 
 export const Input = memo(({ type, value, placeholder, onChange, isValid }) => {
   const handleInputData = ({ target }) => onChange(target.value);

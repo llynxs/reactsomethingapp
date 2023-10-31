@@ -1,4 +1,4 @@
-import React, { useState, memo } from 'react';
+import React, { memo } from 'react';
 
 export const List = memo(({ list, onDeleteItem }) => {
   const handleItemDelete = ({ target }) => onDeleteItem(target.dataset.id);
