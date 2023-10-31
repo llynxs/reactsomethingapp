@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Input, Button, List } from '../components';
 
 export const Form = () => {
@@ -9,8 +9,6 @@ export const Form = () => {
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
 
   const handleEmailInput = data => setEmail(data);
-    // setIsEmailValid(false);
-  // };
 
   const handleNameInput = data => setName(data);
 
@@ -40,16 +38,10 @@ export const Form = () => {
       setIsButtonDisabled(true);
       return;
     }
-
-    console.log(isValid, 'email', email);
     
     setIsButtonDisabled(false);
     handleEmailInput(email);
   };
-
-  // useEffect(() => {
-  //   console.log('useEffect render');
-  // }, [isEmailValid, name]);
 
   return (
     <div className="App-form-wrapper">
@@ -97,7 +89,6 @@ export const Form = () => {
             );
           })
         }
-        {/*<List list={formData} />*/}
       </div>
     </div>
   );
